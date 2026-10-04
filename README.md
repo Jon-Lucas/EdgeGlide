@@ -35,6 +35,12 @@ Positions are mapped by *relative* position (half-way down one edge lands half-w
 
 On top of that, it switches itself fully off whenever a game might be involved (see below).
 
+## Download
+
+Get `EdgeGlide.exe` from the [latest release](https://github.com/Jon-Lucas/EdgeGlide/releases/latest). It's one self-contained file for 64-bit Windows 10/11, with nothing to install and no .NET needed.
+
+The exe isn't code-signed, so Windows SmartScreen may say "Windows protected your PC". Click **More info › Run anyway**. Each release lists the file's SHA-256, which you can check with `Get-FileHash .\EdgeGlide.exe` in PowerShell.
+
 ## Build
 
 You need the .NET 10 SDK (`winget install Microsoft.DotNet.SDK.10`). From this folder, run:

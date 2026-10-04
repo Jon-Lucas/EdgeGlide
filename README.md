@@ -163,3 +163,7 @@ Only the sign of `dx` is used, so pointer speed and acceleration don't matter. B
 Windows hands a raw mouse report to listeners just *before* it moves the cursor, so a report can still show the cursor's old position. The next report catches up. If that was the last report near the edge, a 2 ms high-resolution timer has EdgeGlide look once more. The timer is armed only near the shared edge and only by mouse reports, so it adds no polling.
 
 The passive design has one trade-off. When Windows carries the cursor across (a flick that skips over the edge column), EdgeGlide corrects the height on the next report: about 1 ms later at 1000 Hz, or 2 ms later if you stop right there. Very occasionally you might see one frame at the uncorrected height. A low-level mouse hook could prevent that, but only by sitting in the path of every mouse event on the system, which is exactly what this tool avoids.
+
+## License
+
+[MIT](LICENSE).
